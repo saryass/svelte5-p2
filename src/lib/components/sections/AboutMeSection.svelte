@@ -2,10 +2,23 @@
 	import { SectionHeadline, Button, ExperienceTable } from '$components';
 	import rasm from '$assets/about-me.jpeg';
 	import { goto } from '$app/navigation';
+	import type { DevExperience } from '$lib/types/sanity';
 
 	function navigate() {
 		goto('/#contact-form');
 	}
+
+	// ************************************************************************************************************
+	// used for prop drill all the way from here (AboutMeSection.svelte) to his child (ExperienceTable.svelte)
+	// ************************************************************************************************************
+
+	interface AboutMeSectionProps {
+		workExperience: DevExperience[];
+	}
+
+	let { workExperience }: AboutMeSectionProps = $props();
+	// *************************************************************************
+	// *************************************************************************
 </script>
 
 <section class="about-me mt-l">
@@ -35,7 +48,7 @@
 		</div>
 	</div>
 
-	<ExperienceTable />
+	<ExperienceTable {workExperience} />
 </section>
 
 <style>

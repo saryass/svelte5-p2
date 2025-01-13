@@ -2,18 +2,17 @@
 	import { SectionHeadline, Button, ExperienceTable } from '$components';
 	import rasm from '$assets/about-me.jpeg';
 	import { goto } from '$app/navigation';
-	import type { DevExperience } from '$lib/types/sanity';
 
-	function navigate() {
-		goto('/#contact-form');
-	}
+	function navigate() {  
+		goto('/#contact-form');  
+	} // With hashtag(/#contact-form) The browser stays on the current page and just scrolls to the element with id="contact-form".the "#" treats as a scroll target on the current page.
 
 	// ************************************************************************************************************
 	// used for prop drill all the way from here (AboutMeSection.svelte) to his child (ExperienceTable.svelte)
 	// ************************************************************************************************************
 
 	interface AboutMeSectionProps {
-		workExperience: DevExperience[];
+		workExperience: sanityWorkExperience[];
 	}
 
 	let { workExperience }: AboutMeSectionProps = $props();
@@ -29,7 +28,7 @@
 
 		<div class="text">
 			<p>
-				Hey, I'm Niklas, the driving force behind my freelancing agency specializing in web
+				Hey, I'm Saryass, the driving force behind my freelancing agency specializing in web
 				development and data science.
 			</p>
 			<p>

@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { DevExperience } from '$lib/types/sanity';
 	// ************************************************************************************************************
 	// used for prop drill all the way from here (AboutMeSection.svelte) to his child (ExperienceTable.svelte)
 	// ************************************************************************************************************
 	interface ExperienceTableProps {
-		workExperience: DevExperience[];
+		workExperience: sanityWorkExperience[];
 	}
 
 	let {workExperience}: ExperienceTableProps = $props();
@@ -22,7 +21,7 @@
 						<p>{job.company}</p>
 
 						<p class="dark-grey">
-							{job.startDate?.slice(0,7)}
+							{job.startDate.slice(0,7)}
 							/
 							{#if job.endDate}
 								{job.endDate?.slice(0,7)}

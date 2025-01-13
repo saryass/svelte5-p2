@@ -3,8 +3,8 @@
 	import { Button } from '$components';
 
 	function navigate() {  // custom function ;)
-		goto('/#contact-form');
-	}
+		goto('/#contact-form'); 
+	} // With hashtag(/#contact-form) The browser stays on the current page and just scrolls to the element with id="contact-form".the "#" treats as a scroll target on the current page.
 
 	// function raz () {
 	// 	console.log("choni bashi")
@@ -19,7 +19,7 @@
 	<h1 class="dark-grey mb-m">Web experiences.</h1>
 
 
-	<Button clickMe={navigate}>Let's Talk</Button>
+	<Button clickMe={navigate}>Let's talk</Button>
 	<!-- <Button clickMe={()=> console.log("choni bashi")}>Let's Talk</Button> -->
 </section>
 
